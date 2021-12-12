@@ -17,7 +17,7 @@ const profiles = [
     name:'Mohamed'
   }
 ];
-exports.seed=function(Knex){
+exports.seed=function(knex){
   return knex('profile').del()
   .then(()=>{
     return knex('profiles').insert(profiles)
